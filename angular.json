@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-qrcode-reader": {
+      "projectType": "library",
+      "root": "projects/ngx-qrcode-reader",
+      "sourceRoot": "projects/ngx-qrcode-reader/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-qrcode-reader/tsconfig.lib.json",
+            "project": "projects/ngx-qrcode-reader/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-qrcode-reader/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-qrcode-reader/src/test.ts",
+            "tsConfig": "projects/ngx-qrcode-reader/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-qrcode-reader/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-qrcode-reader/tsconfig.lib.json",
+              "projects/ngx-qrcode-reader/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-qrcode-reader"
 }

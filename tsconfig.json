@@ -10,6 +10,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "ngx-qrcode-reader": [
+        "dist/ngx-qrcode-reader/ngx-qrcode-reader",
+        "dist/ngx-qrcode-reader"
+      ]
+    },
     "target": "es2015",
     "module": "es2020",
     "lib": [

@@ -1,0 +1,29 @@
+{
+  "name": "ngx-qrcode-reader",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ahmedwahba/ngx-qrcode-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedwahba/ngx-qrcode-reader"
+  },
+  "author": {
+    "name": "Ahmed Wahba",
+    "email": "wahba.it@gmail.com"
+  },
+  "keywords": [
+    "angular",
+    "qrcode-reader",
+    "qrcode"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^11.2.14",
+    "@angular/core": "^11.2.14",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4",
+    "qrcode-reader": "^1.0.4"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
