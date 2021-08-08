@@ -74,8 +74,13 @@ preview(files) {
   }
 
   onFetchQRContent(e) {
-    console.log('QR code content result ', e.result);
-    /* add your logic and use the result here */
+     if(result.content) {
+      console.log('QR code content result ', result.content);
+      /* add your logic and use the result here */
+    } else {
+      /* Error while fetching QR content from input image */
+      console.log('ERROR: ', result.error)
+    }
   }
 
 ```

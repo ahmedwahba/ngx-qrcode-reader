@@ -31,10 +31,11 @@ export class NgxQrcodeReaderComponent implements OnChanges , OnInit {
     let that = this;
     this.qrReader.callback = (error: any, result: any) => {
       if(error) {
-        console.log(error);
+        that.qrContentResult.emit({error : error });
+        console.error(error);
         return;
       }
-      that.qrContentResult.emit({result : result.result , type : "text"  });
+      that.qrContentResult.emit({content : result.result , type : "text"  });
     } 
   }
 
